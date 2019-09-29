@@ -9,25 +9,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="#000000"
+            android:textColor="#ffffff"
             android:text="@string/daily_planner"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            android:textSize="42sp"/>
+            android:layout_marginBottom="30dp"
+            android:textSize="60sp"/>
         <EditText
             android:id="@+id/login_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email_address"
-            android:textColorHint="#000000"
-            android:textColor="#000000"
-            android:backgroundTint="#000000"
+            android:textColorHint="#b34700"
+            android:textColor="#b34700"
+            android:textStyle="bold"
+            android:backgroundTint="#b34700"
             android:textCursorDrawable="@null"
             android:inputType="textEmailAddress"
             android:layout_marginBottom="16dp"/>
@@ -35,10 +37,11 @@
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#000000"
-            android:backgroundTint="#000000"
+            android:textColorHint="#b34700"
+            android:textStyle="bold"
+            android:backgroundTint="#b34700"
             android:textCursorDrawable="@null"
-            android:textColor="#000000"
+            android:textColor="#b34700"
             android:hint="@string/password"
             android:inputType="textPassword"
             android:layout_marginBottom="16dp"/>
@@ -55,7 +58,8 @@
             android:layout_height="wrap_content"
             android:textSize="22sp"
             android:layout_gravity="center"
-            android:textColor="#000000"
+            android:textColor="#662200"
+            android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:text="@string/sign_up_msg"/>
         <Button
