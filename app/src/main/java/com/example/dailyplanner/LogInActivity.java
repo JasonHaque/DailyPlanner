@@ -30,6 +30,7 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
         bindWidgets();
         bindListeners();
+        checkUserStatus();
     }
     void bindWidgets(){
         directToSignup=findViewById(R.id.signup_transfer);
@@ -80,5 +81,12 @@ public class LogInActivity extends AppCompatActivity {
                 return;
             }
         });
+    }
+    private void checkUserStatus(){
+        if(firebaseAuth.getCurrentUser() != null){
+            String[] ID=firebaseAuth.getCurrentUser().getEmail().toString().split("@");
+            userID=ID[0];
+            startActivity(new Intent(LogInActivity.this,ProfileActivity.class));
+        }
     }
 }
