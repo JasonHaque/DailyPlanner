@@ -5,12 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="20dp"
     tools:context=".LogInActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"/>
+        android:text="@string/daily_planner"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="42sp"/>
+    <EditText
+        android:id="@+id/login_mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_address"
+        android:layout_marginBottom="16dp"/>
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="@string/log_in"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="@string/sign_up_msg"/>
+    <Button
+        android:id="@+id/signup_transfer"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sign_up"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>
