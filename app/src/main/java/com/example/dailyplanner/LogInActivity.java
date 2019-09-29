@@ -70,6 +70,7 @@ public class LogInActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 String[] ID=firebaseAuth.getCurrentUser().getEmail().toString().split("@");
                 userID=ID[0];
+                startActivity(new Intent(LogInActivity.this,ProfileActivity.class));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
