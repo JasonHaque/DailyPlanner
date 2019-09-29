@@ -51,7 +51,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    void initiateSignUp() {
+    private void initiateSignUp() {
         String email = signupMail.getText().toString();
         String password = signupPassword.getText().toString();
         String confirm = confirmPassword.getText().toString();
