@@ -6,4 +6,5 @@
     <string name="log_in">Log In</string>
     <string name="sign_up_msg">New here ? Sign Up now</string>
     <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>
