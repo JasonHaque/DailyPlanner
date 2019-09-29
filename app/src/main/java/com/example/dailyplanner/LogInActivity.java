@@ -1,5 +1,6 @@
 package com.example.dailyplanner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,6 +23,7 @@ public class LogInActivity extends AppCompatActivity {
     private EditText loginMail,loginPassword;
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
+    public static String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +66,17 @@ public class LogInActivity extends AppCompatActivity {
         firebaseAuth.signInWithEmailAndPassword(mail,pass).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
-
+                Toast.makeText(LogInActivity.this,"Success", Toast.LENGTH_LONG).show();
+                progressDialog.dismiss();
+                String[] ID=firebaseAuth.getCurrentUser().getEmail().toString().split("@");
+                userID=ID[0];
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(LogInActivity.this,"Login Failed", Toast.LENGTH_LONG).show();
+                progressDialog.dismiss();
+                return;
             }
         });
     }
