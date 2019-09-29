@@ -9,11 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText signupMail,signupPassword,confirmPassword;
     private ProgressDialog progressDialog;
     private Button signUp;
+    private FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
         confirmPassword=findViewById(R.id.confirm_signup_password);
         signUp=findViewById(R.id.signup_button);
         progressDialog=new ProgressDialog(this);
+        firebaseAuth=FirebaseAuth.getInstance();
     }
 
     void bindListeners(){
@@ -53,5 +57,10 @@ public class SignUpActivity extends AppCompatActivity {
             Toast.makeText(SignUpActivity.this,"Passwords do not match", Toast.LENGTH_LONG).show();
             return;
         }
+        SignUp(email,password);
+    }
+
+    void SignUp(String email, String password){
+        firebaseAuth.createUserWithEmailAndPassword(email,password);
     }
 }
