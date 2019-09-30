@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class NotesActivity extends AppCompatActivity {
 
-    private Button linkToProfile;
+    private Button linkToProfile,newNote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +21,19 @@ public class NotesActivity extends AppCompatActivity {
     private void bindWidgets()
     {
         linkToProfile=findViewById(R.id.link_to_profile);
+        newNote=findViewById(R.id.new_note);
     }
     private void bindListeners(){
         linkToProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
+            }
+        });
+        newNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
