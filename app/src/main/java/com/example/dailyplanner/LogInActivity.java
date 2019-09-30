@@ -71,7 +71,7 @@ public class LogInActivity extends AppCompatActivity {
                 progressDialog.dismiss();
                 String[] ID=firebaseAuth.getCurrentUser().getEmail().toString().split("@");
                 userID=ID[0];
-                startActivity(new Intent(LogInActivity.this,ProfileActivity.class));
+                startActivity(new Intent(LogInActivity.this,NotesActivity.class));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -86,7 +86,7 @@ public class LogInActivity extends AppCompatActivity {
         if(firebaseAuth.getCurrentUser() != null){
             String[] ID=firebaseAuth.getCurrentUser().getEmail().toString().split("@");
             userID=ID[0];
-            startActivity(new Intent(LogInActivity.this,ProfileActivity.class));
+            startActivity(new Intent(LogInActivity.this,NotesActivity.class));
         }
     }
 }
