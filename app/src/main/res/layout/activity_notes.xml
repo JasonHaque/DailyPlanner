@@ -14,12 +14,12 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="button1"
+            android:text="New Note"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="button2"
+            android:text="Existing Notes"
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -32,12 +32,12 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="button3"
+            android:text="Daily Schedule"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="button4"
+            android:text="See Schedule"
             android:layout_weight="1"/>
 
     </LinearLayout>
