@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#d9d9d9"
     tools:context=".NotesActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +52,7 @@
             android:adjustViewBounds="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="#b30086"
+            android:background="#996600"
             android:text="Daily Schedule"
             android:layout_weight="1"/>
         <ImageButton
@@ -61,7 +62,7 @@
             android:src="@drawable/seeschedule"
             android:scaleType="fitCenter"
             android:layout_marginRight="10dp"
-            android:background="#00e6e6"
+            android:background="#6699ff"
             android:adjustViewBounds="true"
             android:text="See Schedule"
             android:layout_weight="1"/>
@@ -73,7 +74,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/gotoprofile"
         android:scaleType="fitCenter"
-        android:background="#bf4040"
+        android:background="#999966"
         android:layout_margin="10dp"
         android:adjustViewBounds="true"
         android:text="Go to Profile"
