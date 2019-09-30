@@ -18,6 +18,7 @@
             android:text="New Note"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/note_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Existing Notes"
@@ -31,11 +32,13 @@
         android:orientation="horizontal"
         android:weightSum="2">
         <Button
+            android:id="@+id/schedule"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Daily Schedule"
             android:layout_weight="1"/>
         <Button
+            android:id="@+id/see_schedule"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="See Schedule"
