@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="45dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:textColor="#ffffff"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:textSize="60sp"/>
+            android:textSize="70sp"/>
 
         <EditText
             android:id="@+id/signup_mail"
@@ -30,6 +30,7 @@
             android:textColorHint="#b34700"
             android:textColor="#b34700"
             android:textStyle="bold"
+            android:textSize="25sp"
             android:backgroundTint="#b34700"
             android:textCursorDrawable="@null"
             android:inputType="textEmailAddress"
@@ -41,6 +42,7 @@
             android:hint="@string/password"
             android:textColorHint="#b34700"
             android:textColor="#b34700"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:backgroundTint="#b34700"
             android:textCursorDrawable="@null"
@@ -53,6 +55,7 @@
             android:hint="@string/confirm_password"
             android:textColorHint="#b34700"
             android:textColor="#b34700"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:backgroundTint="#b34700"
             android:textCursorDrawable="@null"
