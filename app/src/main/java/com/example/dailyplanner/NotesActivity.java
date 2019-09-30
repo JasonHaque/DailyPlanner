@@ -33,7 +33,7 @@ public class NotesActivity extends AppCompatActivity {
         newNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
             }
         });
     }
