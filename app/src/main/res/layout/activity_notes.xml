@@ -8,47 +8,74 @@
     tools:context=".NotesActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="235dp"
         android:orientation="horizontal"
+        android:layout_margin="10dp"
         android:weightSum="2">
-        <Button
+        <ImageButton
             android:id="@+id/new_note"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/newnote"
+            android:scaleType="fitCenter"
+            android:background="#248f24"
+            android:adjustViewBounds="true"
             android:text="New Note"
             android:layout_weight="1"/>
-        <Button
+        <ImageButton
             android:id="@+id/note_history"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:src="@drawable/existingnote"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:background="#ffcc99"
+            android:layout_height="match_parent"
             android:text="Existing Notes"
+
             android:layout_weight="1"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="235dp"
         android:orientation="horizontal"
         android:weightSum="2">
-        <Button
+        <ImageButton
             android:id="@+id/schedule"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/dailyschedule"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#b30086"
             android:text="Daily Schedule"
             android:layout_weight="1"/>
-        <Button
+        <ImageButton
             android:id="@+id/see_schedule"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/seeschedule"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="10dp"
+            android:background="#00e6e6"
+            android:adjustViewBounds="true"
             android:text="See Schedule"
             android:layout_weight="1"/>
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:src="@drawable/gotoprofile"
+        android:scaleType="fitCenter"
+        android:background="#bf4040"
+        android:layout_margin="10dp"
+        android:adjustViewBounds="true"
         android:text="Go to Profile"
         android:id="@+id/link_to_profile"/>
 </LinearLayout>
