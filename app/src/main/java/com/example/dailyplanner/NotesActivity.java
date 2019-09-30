@@ -51,5 +51,11 @@ public class NotesActivity extends AppCompatActivity {
                 startActivity(new Intent(NotesActivity.this,ScheduleActivity.class));
             }
         });
+        seeSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,SeeScheduleActivity.class));
+            }
+        });
     }
 }
