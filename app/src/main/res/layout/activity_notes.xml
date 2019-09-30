@@ -9,7 +9,7 @@
     tools:context=".NotesActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="235dp"
+        android:layout_height="232dp"
         android:orientation="horizontal"
         android:layout_margin="10dp"
         android:weightSum="2">
@@ -40,7 +40,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="235dp"
+        android:layout_height="232dp"
         android:orientation="horizontal"
         android:weightSum="2">
         <ImageButton
