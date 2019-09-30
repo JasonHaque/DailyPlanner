@@ -8,6 +8,7 @@
     tools:context=".NewNoteAcitivity">
 
     <TextView
+        android:id="@+id/note_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="28sp"
@@ -16,17 +17,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/set_note_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Note Name"
             android:layout_weight="2"/>
         <Button
+            android:id="@+id/set_note_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Set Name"/>
     </LinearLayout>
 
     <EditText
+        android:id="@+id/note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="3"
@@ -35,10 +39,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <Button
+        android:id="@+id/save_note_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"/>
     <Button
+        android:id="@+id/cancel_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"/>
