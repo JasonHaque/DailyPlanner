@@ -47,13 +47,14 @@
             android:layout_marginBottom="16dp"/>
         <Button
             android:id="@+id/login_button"
-            android:layout_width="wrap_content"
+            android:layout_width="112dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="#ffffff"
             android:textSize="22sp"
+            android:padding="12dp"
             android:layout_marginBottom="16dp"
-            android:background="#ff6600"
+            android:background="#ff6666"
             android:text="@string/log_in"/>
         <TextView
             android:layout_width="wrap_content"
@@ -69,7 +70,8 @@
             android:layout_width="wrap_content"
             android:textColor="#ffffff"
             android:textSize="22sp"
-            android:background="#ff6600"
+            android:padding="12dp"
+            android:background="#ff6666"
             android:layout_gravity="center"
             android:text="@string/sign_up"
             android:layout_height="wrap_content"/>
