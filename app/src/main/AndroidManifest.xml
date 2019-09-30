@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoteHistoryActivity"></activity>
+        <activity android:name=".ScheduleActivity"></activity>
+        <activity android:name=".NoteHistoryActivity" />
         <activity android:name=".NewNoteAcitivity" />
         <activity android:name=".NotesActivity" />
         <activity android:name=".ProfileActivity" />
