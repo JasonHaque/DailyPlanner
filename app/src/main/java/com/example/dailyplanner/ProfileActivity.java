@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         bindWidgets();
         bindListeners();
-        userView.setText("Welcome User"+userID);
+        userView.setText("Welcome User \n "+userID);
     }
 
     void bindWidgets(){
