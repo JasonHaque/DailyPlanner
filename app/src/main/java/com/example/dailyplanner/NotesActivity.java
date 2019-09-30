@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class NotesActivity extends AppCompatActivity {
 
-    private Button linkToProfile,newNote;
+    private Button linkToProfile,newNote,noteHistory,schedule,seeSchedule;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,9 @@ public class NotesActivity extends AppCompatActivity {
     {
         linkToProfile=findViewById(R.id.link_to_profile);
         newNote=findViewById(R.id.new_note);
+        noteHistory=findViewById(R.id.note_history);
+        schedule=findViewById(R.id.schedule);
+        seeSchedule=findViewById(R.id.see_schedule);
     }
     private void bindListeners(){
         linkToProfile.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +37,12 @@ public class NotesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
+            }
+        });
+        noteHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,NoteHistoryActivity.class));
             }
         });
     }
