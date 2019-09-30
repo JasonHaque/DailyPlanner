@@ -10,11 +10,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add a note"/>
+        android:textSize="28sp"
+        android:visibility="invisible"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:hint="Enter Your Note"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,5 +28,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"/>
-
+    </LinearLayout>
 </LinearLayout>
