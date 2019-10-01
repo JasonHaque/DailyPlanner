@@ -10,11 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import static com.example.dailyplanner.LogInActivity.userID;
+
 public class NewNoteAcitivity extends AppCompatActivity {
 
     private Button setNoteButton,saveNoteButton,cancel;
     private EditText note,setNoteName;
     private TextView noteName;
+    private DatabaseReference dref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
         note=findViewById(R.id.note);
         setNoteName=findViewById(R.id.set_note_name);
         noteName=findViewById(R.id.note_name);
+        dref= FirebaseDatabase.getInstance().getReference();
     }
 
     private void bindListeners(){
@@ -50,6 +59,21 @@ public class NewNoteAcitivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NewNoteAcitivity.this,NotesActivity.class));
+            }
+        });
+        saveNoteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String noteName = setNoteName.getText().toString().trim();
+                String noteContent=note.getText().toString();
+                NewNote userNote = new NewNote(noteName,noteContent);
+                dref.child(userID).child("Notes").setValue(userNote).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(NewNoteAcitivity.this,"Success",Toast.LENGTH_LONG).show();
+
+                    }
+                });
             }
         });
     }
