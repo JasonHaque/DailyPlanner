@@ -10,7 +10,8 @@ import android.widget.ImageButton;
 
 public class NotesActivity extends AppCompatActivity {
 
-    private ImageButton linkToProfile,newNote,noteHistory,schedule,seeSchedule;
+    private ImageButton linkToProfile1,newNote1,noteHistory1,schedule1,seeSchedule1;
+    private Button linkToProfile2,newNote2,noteHistory2,schedule2,seeSchedule2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,38 +22,73 @@ public class NotesActivity extends AppCompatActivity {
     }
     private void bindWidgets()
     {
-        linkToProfile=findViewById(R.id.link_to_profile);
-        newNote=findViewById(R.id.new_note);
-        noteHistory=findViewById(R.id.note_history);
-        schedule=findViewById(R.id.schedule);
-        seeSchedule=findViewById(R.id.see_schedule);
+        linkToProfile1=findViewById(R.id.link_to_profile1);
+        newNote1=findViewById(R.id.new_note1);
+        noteHistory1=findViewById(R.id.note_history1);
+        schedule1=findViewById(R.id.schedule1);
+        seeSchedule1=findViewById(R.id.see_schedule1);
+        linkToProfile2=findViewById(R.id.link_to_profile2);
+        newNote2=findViewById(R.id.new_note2);
+        noteHistory2=findViewById(R.id.note_history2);
+        schedule2=findViewById(R.id.schedule2);
+        seeSchedule2=findViewById(R.id.see_schedule2);
     }
     private void bindListeners(){
-        linkToProfile.setOnClickListener(new View.OnClickListener() {
+        linkToProfile1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
             }
         });
-        newNote.setOnClickListener(new View.OnClickListener() {
+        newNote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
             }
         });
-        noteHistory.setOnClickListener(new View.OnClickListener() {
+        noteHistory1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,NoteHistoryActivity.class));
             }
         });
-        schedule.setOnClickListener(new View.OnClickListener() {
+        schedule1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,ScheduleActivity.class));
             }
         });
-        seeSchedule.setOnClickListener(new View.OnClickListener() {
+        seeSchedule1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,SeeScheduleActivity.class));
+            }
+        });
+        linkToProfile2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
+            }
+        });
+        newNote2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
+            }
+        });
+        noteHistory2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,NoteHistoryActivity.class));
+            }
+        });
+        schedule2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NotesActivity.this,ScheduleActivity.class));
+            }
+        });
+        seeSchedule2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,SeeScheduleActivity.class));

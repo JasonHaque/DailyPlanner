@@ -21,7 +21,7 @@
             android:background="#248f24"
             android:layout_weight="1">
             <ImageButton
-                android:id="@+id/new_note"
+                android:id="@+id/new_note1"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:src="@drawable/newnote"
@@ -30,6 +30,7 @@
                 android:adjustViewBounds="true"
                 android:layout_marginBottom="5dp"/>
             <Button
+                android:id="@+id/new_note2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="New Note"
@@ -47,7 +48,7 @@
             android:background="#ffcc99"
             android:layout_weight="1">
             <ImageButton
-                android:id="@+id/note_history"
+                android:id="@+id/note_history1"
                 android:layout_width="match_parent"
                 android:src="@drawable/existingnote"
                 android:scaleType="fitCenter"
@@ -55,6 +56,7 @@
                 android:background="#ffcc99"
                 android:layout_height="180dp" />
             <Button
+                android:id="@+id/note_history2"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -82,7 +84,7 @@
             android:background="#996600"
             android:layout_weight="1">
             <ImageButton
-                android:id="@+id/schedule"
+                android:id="@+id/schedule1"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:src="@drawable/dailyschedule"
@@ -91,6 +93,7 @@
                 android:adjustViewBounds="true"
                 android:layout_marginBottom="5dp"/>
             <Button
+                android:id="@+id/schedule2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Daily Schedule"
@@ -108,7 +111,7 @@
             android:background="#6699ff"
             android:layout_weight="1">
             <ImageButton
-                android:id="@+id/see_schedule"
+                android:id="@+id/see_schedule1"
                 android:layout_width="match_parent"
                 android:src="@drawable/seeschedule"
                 android:scaleType="fitCenter"
@@ -116,6 +119,7 @@
                 android:background="#6699ff"
                 android:layout_height="180dp" />
             <Button
+                android:id="@+id/see_schedule2"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -137,7 +141,7 @@
         android:background="#999966"
         android:layout_weight="1">
         <ImageButton
-            android:id="@+id/link_to_profile"
+            android:id="@+id/link_to_profile1"
             android:layout_width="230dp"
             android:src="@drawable/gotoprofile"
             android:scaleType="fitCenter"
@@ -145,6 +149,7 @@
             android:background="#999966"
             android:layout_height="180dp" />
         <Button
+            android:id="@+id/link_to_profile2"
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
