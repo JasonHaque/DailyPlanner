@@ -21,6 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Note Name"
+            android:backgroundTint="#000000"
+            android:textCursorDrawable="@null"
             android:layout_weight="2"/>
         <Button
             android:id="@+id/set_note_button"
@@ -36,9 +38,13 @@
         android:inputType="textMultiLine"
         android:maxLines="40"
         android:minLines="15"
+        android:textCursorDrawable="@null"
+        android:background="@drawable/back"
         android:scrollbars="vertical"
         android:gravity="left|top"
-        android:hint="Enter Your Note"/>
+        android:hint="Enter Your Note">
+        <requestFocus />
+    </EditText>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
