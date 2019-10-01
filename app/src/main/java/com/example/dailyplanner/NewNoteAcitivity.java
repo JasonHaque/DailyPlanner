@@ -74,7 +74,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                 NewNote userNote = new NewNote(noteName,noteContent);
                 progressDialog.setTitle("Saving");
                 progressDialog.show();
-                dref.child(userID).child("Notes").setValue(userNote).addOnSuccessListener(new OnSuccessListener<Void>() {
+                dref.child(userID).child("Notes").child(noteName+userID).setValue(userNote).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
                         progressDialog.dismiss();
