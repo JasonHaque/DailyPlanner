@@ -20,6 +20,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
+
 import static com.example.dailyplanner.LogInActivity.userID;
 
 public class NewNoteAcitivity extends AppCompatActivity {
@@ -99,12 +101,20 @@ public class NewNoteAcitivity extends AppCompatActivity {
                         Toast.makeText(NewNoteAcitivity.this,"Failed",Toast.LENGTH_LONG).show();
                     }
                 });
-                String path=userID+"/'"+"Notes"+"/"+noteName+userID;
-                dref.child(path).addValueEventListener(new ValueEventListener() {
+
+                dref.child(userID).child("Notes").child(noteName+userID).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        NewNote nud=dataSnapshot.getValue(NewNote.class);
-                        System.out.println(nud);
+                        if (dataSnapshot.exists()){
+                            System.out.println(dataSnapshot.getValue());
+                            HashMap<String, Object> dataMap = (HashMap<String, Object>) dataSnapshot.getValue();
+                            NewNote abs = new NewNote((String)dataMap.get("name"), (String) dataMap.get("content"));
+                            System.out.println(abs.name+"        "+abs.content);
+
+                        }
+                        else{
+                            System.out.println("Failed");
+                        }
                     }
 
                     @Override
@@ -113,7 +123,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                     }
                 });
 
-                //startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+
                 System.out.println(abs);
 
             }

@@ -24,8 +24,8 @@ public class SuccessfulNote extends AppCompatActivity {
         setContentView(R.layout.activity_successful_note);
         bindWidgets();
         bindListeners();
-        //successfulNoteName.setText(abs.name);
-        //successfulNoteContent.setText(abs.content);
+        successfulNoteName.setText(abs.name);
+        successfulNoteContent.setText(abs.content);
 
     }
 
