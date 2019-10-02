@@ -147,7 +147,7 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:background="#999966"
-            android:layout_height="180dp" />
+            android:layout_height="match_parent" />
         <Button
             android:id="@+id/link_to_profile2"
             android:layout_marginTop="5dp"
