@@ -14,8 +14,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import static com.example.dailyplanner.LogInActivity.userID;
 
@@ -26,6 +29,8 @@ public class NewNoteAcitivity extends AppCompatActivity {
     private TextView noteName;
     private DatabaseReference dref;
     private ProgressDialog progressDialog;
+    public static String sendNoteName;
+    public static NewNote abs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,9 +74,10 @@ public class NewNoteAcitivity extends AppCompatActivity {
         saveNoteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String noteName = setNoteName.getText().toString().trim();
+                final String noteName = setNoteName.getText().toString().trim();
                 String noteContent=note.getText().toString();
                 NewNote userNote = new NewNote(noteName,noteContent);
+                sendNoteName=noteName;
                 progressDialog.setTitle("Saving");
                 progressDialog.show();
                 dref.child(userID).child("Notes").child(noteName+userID).setValue(userNote).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -79,7 +85,10 @@ public class NewNoteAcitivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         progressDialog.dismiss();
                         Toast.makeText(NewNoteAcitivity.this,"Success",Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+
+
+                        //startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+
 
 
                     }
@@ -90,6 +99,23 @@ public class NewNoteAcitivity extends AppCompatActivity {
                         Toast.makeText(NewNoteAcitivity.this,"Failed",Toast.LENGTH_LONG).show();
                     }
                 });
+                String path=userID+"/'"+"Notes"+"/"+noteName+userID;
+                dref.child(path).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        NewNote nud=dataSnapshot.getValue(NewNote.class);
+                        System.out.println(nud);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+                //startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+                System.out.println(abs);
+
             }
         });
     }
