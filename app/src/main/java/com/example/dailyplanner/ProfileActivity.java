@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private Button logout, backToNotes;
     private FirebaseAuth firebaseAuth;
+    private ImageView profileImage;
     private TextView userView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         bindWidgets();
         bindListeners();
         userView.setText("Welcome User \n "+userID);
+        profileImage.setImageResource(R.drawable.profile);
     }
 
     void bindWidgets(){
@@ -31,6 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         userView=findViewById(R.id.user_view);
         backToNotes=findViewById(R.id.notes_back_button);
+        profileImage=findViewById(R.id.profile_image);
     }
     void bindListeners(){
         logout.setOnClickListener(new View.OnClickListener() {
