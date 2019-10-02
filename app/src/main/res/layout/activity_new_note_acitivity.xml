@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
     tools:context=".NewNoteAcitivity">
 
     <TextView
@@ -15,12 +16,14 @@
         android:visibility="invisible"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
         <EditText
             android:id="@+id/set_note_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Note Name"
+            android:textSize="23sp"
             android:backgroundTint="#000000"
             android:textCursorDrawable="@null"
             android:layout_weight="2"/>
@@ -28,6 +31,7 @@
             android:id="@+id/set_note_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="22sp"
             android:text="Set Name"/>
     </LinearLayout>
 
@@ -38,6 +42,7 @@
         android:inputType="textMultiLine"
         android:maxLines="40"
         android:minLines="15"
+        android:textSize="23sp"
         android:textCursorDrawable="@null"
         android:background="@drawable/back"
         android:scrollbars="vertical"
@@ -47,16 +52,20 @@
     </EditText>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
     <Button
         android:id="@+id/save_note_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_marginRight="3dp"
         android:text="Save"/>
     <Button
         android:id="@+id/cancel_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="22sp"
         android:text="Cancel"/>
     </LinearLayout>
 </LinearLayout>
