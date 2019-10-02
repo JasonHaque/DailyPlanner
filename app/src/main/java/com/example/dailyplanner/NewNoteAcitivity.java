@@ -79,6 +79,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         progressDialog.dismiss();
                         Toast.makeText(NewNoteAcitivity.this,"Success",Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
 
 
                     }
