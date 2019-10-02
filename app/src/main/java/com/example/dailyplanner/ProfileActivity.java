@@ -14,7 +14,7 @@ import static com.example.dailyplanner.LogInActivity.userID;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private Button logout;
+    private Button logout, backToNotes;
     private FirebaseAuth firebaseAuth;
     private TextView userView;
     @Override
@@ -30,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
         logout=findViewById(R.id.log_out);
         firebaseAuth=FirebaseAuth.getInstance();
         userView=findViewById(R.id.user_view);
-
+        backToNotes=findViewById(R.id.notes_back_button);
     }
     void bindListeners(){
         logout.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +38,12 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 firebaseAuth.signOut();
                 startActivity(new Intent(ProfileActivity.this,LogInActivity.class));
+            }
+        });
+        backToNotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileActivity.this,NotesActivity.class));
             }
         });
     }
