@@ -43,7 +43,7 @@ public class NotesActivity extends AppCompatActivity {
         newNote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
+                startActivity(new Intent(NotesActivity.this, NewNoteActivity.class));
             }
         });
         noteHistory1.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,7 @@ public class NotesActivity extends AppCompatActivity {
         newNote2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NotesActivity.this,NewNoteAcitivity.class));
+                startActivity(new Intent(NotesActivity.this, NewNoteActivity.class));
             }
         });
         noteHistory2.setOnClickListener(new View.OnClickListener() {

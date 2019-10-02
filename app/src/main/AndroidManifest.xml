@@ -13,7 +13,7 @@
         <activity android:name=".SeeScheduleActivity" />
         <activity android:name=".ScheduleActivity" />
         <activity android:name=".NoteHistoryActivity" />
-        <activity android:name=".NewNoteAcitivity" />
+        <activity android:name=".NewNoteActivity" />
         <activity android:name=".NotesActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SignUpActivity" />

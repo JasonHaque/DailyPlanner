@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 import static com.example.dailyplanner.LogInActivity.userID;
 
-public class NewNoteAcitivity extends AppCompatActivity {
+public class NewNoteActivity extends AppCompatActivity {
 
     private Button setNoteButton,saveNoteButton,cancel,view;
     private EditText note,setNoteName;
@@ -61,7 +61,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
             public void onClick(View view) {
                 String nameOfNote =setNoteName.getText().toString();
                 if(nameOfNote.isEmpty()){
-                    Toast.makeText(NewNoteAcitivity.this,"Enter a note name",Toast.LENGTH_LONG).show();
+                    Toast.makeText(NewNoteActivity.this,"Enter a note name",Toast.LENGTH_LONG).show();
                     return;
                 }
                 noteName.setText(nameOfNote);
@@ -73,7 +73,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewNoteAcitivity.this,NotesActivity.class));
+                startActivity(new Intent(NewNoteActivity.this,NotesActivity.class));
             }
         });
         saveNoteButton.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +89,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         progressDialog.dismiss();
-                        Toast.makeText(NewNoteAcitivity.this,"Success",Toast.LENGTH_LONG).show();
+                        Toast.makeText(NewNoteActivity.this,"Success",Toast.LENGTH_LONG).show();
 
 
 
@@ -101,7 +101,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         progressDialog.dismiss();
-                        Toast.makeText(NewNoteAcitivity.this,"Failed",Toast.LENGTH_LONG).show();
+                        Toast.makeText(NewNoteActivity.this,"Failed",Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -136,7 +136,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+                startActivity(new Intent(NewNoteActivity.this,SuccessfulNote.class));
             }
         });
 
