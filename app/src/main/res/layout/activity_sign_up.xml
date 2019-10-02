@@ -72,5 +72,16 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:text="@string/sign_up"/>
+        <Button
+            android:id="@+id/backlogin_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BACK TO LOGIN"
+            android:padding="12dp"
+            android:textColor="#ffffff"
+            android:background="#006666"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 </ScrollView>
