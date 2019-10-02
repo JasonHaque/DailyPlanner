@@ -26,13 +26,14 @@ import static com.example.dailyplanner.LogInActivity.userID;
 
 public class NewNoteAcitivity extends AppCompatActivity {
 
-    private Button setNoteButton,saveNoteButton,cancel;
+    private Button setNoteButton,saveNoteButton,cancel,view;
     private EditText note,setNoteName;
     private TextView noteName;
 
     private DatabaseReference dref;
     private ProgressDialog progressDialog;
     public static String sendNoteName;
+    public static NewNote snote;
 
 
     @Override
@@ -51,7 +52,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
         noteName=findViewById(R.id.note_name);
         dref= FirebaseDatabase.getInstance().getReference();
         progressDialog=new ProgressDialog(this);
-
+        view=findViewById(R.id.view);
     }
 
     private void bindListeners(){
@@ -112,6 +113,8 @@ public class NewNoteAcitivity extends AppCompatActivity {
                             HashMap<String, Object> dataMap = (HashMap<String, Object>) dataSnapshot.getValue();
                             NewNote abs = new NewNote((String)dataMap.get("name"), (String) dataMap.get("content"));
                             System.out.println(abs.name+"        "+abs.content);
+                            snote=new NewNote(abs.name,abs.content);
+                            System.out.println(snote.name+"     "+snote.content);
 
 
                         }
@@ -130,6 +133,12 @@ public class NewNoteAcitivity extends AppCompatActivity {
             }
         });
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+            }
+        });
 
     }
 }
