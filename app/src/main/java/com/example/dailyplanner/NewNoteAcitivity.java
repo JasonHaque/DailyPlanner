@@ -29,10 +29,11 @@ public class NewNoteAcitivity extends AppCompatActivity {
     private Button setNoteButton,saveNoteButton,cancel;
     private EditText note,setNoteName;
     private TextView noteName;
+
     private DatabaseReference dref;
     private ProgressDialog progressDialog;
     public static String sendNoteName;
-    public static NewNote abs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
         noteName=findViewById(R.id.note_name);
         dref= FirebaseDatabase.getInstance().getReference();
         progressDialog=new ProgressDialog(this);
+
     }
 
     private void bindListeners(){
@@ -89,7 +91,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                         Toast.makeText(NewNoteAcitivity.this,"Success",Toast.LENGTH_LONG).show();
 
 
-                        //startActivity(new Intent(NewNoteAcitivity.this,SuccessfulNote.class));
+
 
 
 
@@ -111,6 +113,7 @@ public class NewNoteAcitivity extends AppCompatActivity {
                             NewNote abs = new NewNote((String)dataMap.get("name"), (String) dataMap.get("content"));
                             System.out.println(abs.name+"        "+abs.content);
 
+
                         }
                         else{
                             System.out.println("Failed");
@@ -124,9 +127,9 @@ public class NewNoteAcitivity extends AppCompatActivity {
                 });
 
 
-                System.out.println(abs);
-
             }
         });
+
+
     }
 }

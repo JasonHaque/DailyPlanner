@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import static com.example.dailyplanner.LogInActivity.userID;
-import static com.example.dailyplanner.NewNoteAcitivity.abs;
+
 import static com.example.dailyplanner.NewNoteAcitivity.sendNoteName;
 
 public class SuccessfulNote extends AppCompatActivity {
@@ -24,8 +24,7 @@ public class SuccessfulNote extends AppCompatActivity {
         setContentView(R.layout.activity_successful_note);
         bindWidgets();
         bindListeners();
-        successfulNoteName.setText(abs.name);
-        successfulNoteContent.setText(abs.content);
+
 
     }
 
