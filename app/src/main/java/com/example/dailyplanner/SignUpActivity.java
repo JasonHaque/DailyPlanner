@@ -20,7 +20,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText signupMail, signupPassword, confirmPassword;
     private ProgressDialog progressDialog;
-    private Button signUp;
+    private Button signUp,backButton;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -36,6 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
         signupPassword = findViewById(R.id.signup_password);
         confirmPassword = findViewById(R.id.confirm_signup_password);
         signUp = findViewById(R.id.signup_button);
+        backButton = findViewById(R.id.backlogin_button);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
     }
@@ -47,6 +48,12 @@ public class SignUpActivity extends AppCompatActivity {
 
                 initiateSignUp();
 
+            }
+        });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignUpActivity.this,LogInActivity.class));
             }
         });
     }
