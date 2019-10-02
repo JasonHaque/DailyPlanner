@@ -23,7 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="Note Name"
-            android:textSize="23sp"
+            android:textSize="24sp"
             android:backgroundTint="#000000"
             android:textCursorDrawable="@null"
             android:layout_weight="2"/>
@@ -31,6 +31,9 @@
             android:id="@+id/set_note_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#333399"
+            android:textColor="#ffffff"
+            android:padding="12dp"
             android:textSize="22sp"
             android:text="Set Name"/>
     </LinearLayout>
@@ -41,8 +44,8 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:maxLines="40"
-        android:minLines="15"
-        android:textSize="23sp"
+        android:minLines="13"
+        android:textSize="24sp"
         android:textCursorDrawable="@null"
         android:background="@drawable/back"
         android:scrollbars="vertical"
@@ -53,19 +56,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp">
+        android:layout_marginTop="8dp">
     <Button
         android:id="@+id/save_note_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="22sp"
-        android:layout_marginRight="3dp"
+        android:padding="10dp"
+        android:textColor="#ffffff"
+        android:background="#004d00"
+        android:layout_marginRight="8dp"
         android:text="Save"/>
     <Button
         android:id="@+id/cancel_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="22sp"
+        android:background="#990000"
+        android:textColor="#ffffff"
+        android:padding="10dp"
         android:text="Cancel"/>
     </LinearLayout>
 </LinearLayout>
