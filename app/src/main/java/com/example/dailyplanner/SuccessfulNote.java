@@ -28,7 +28,6 @@ public class SuccessfulNote extends AppCompatActivity {
         successfulNoteName=findViewById(R.id.successful_note_name);
         successfulNoteContent=findViewById(R.id.successful_note_content);
         back=findViewById(R.id.backn_button);
-        //dref=FirebaseDatabase.getInstance().getReference().child(userID).child(sendNoteName+userID);
     }
 
     private void bindListeners(){
