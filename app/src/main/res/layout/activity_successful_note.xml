@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e6e6ff"
     android:padding="15dp"
     android:orientation="vertical"
     tools:context=".SuccessfulNote">
@@ -13,7 +14,7 @@
         android:layout_width="match_parent"
         android:textSize="35sp"
         android:textStyle="bold"
-        android:textColor="#000000"
+        android:textColor="#000066"
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content"/>
     <TextView
