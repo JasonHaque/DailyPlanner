@@ -82,9 +82,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
-            android:background="#ff3300"
+            android:background="#663300"
+            android:layout_marginRight="8dp"
             android:textColor="#ffffff"
             android:padding="10dp"
             android:text="View"/>
+        <Button
+            android:id="@+id/backtonotes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:background="#006666"
+            android:textColor="#ffffff"
+            android:padding="10dp"
+            android:text="Back"/>
     </LinearLayout>
 </LinearLayout>
