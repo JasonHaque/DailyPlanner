@@ -26,7 +26,7 @@ import static com.example.dailyplanner.LogInActivity.userID;
 
 public class NewNoteActivity extends AppCompatActivity {
 
-    private Button setNoteButton,saveNoteButton,cancel,view;
+    private Button setNoteButton,saveNoteButton,cancel,view,back;
     private EditText note,setNoteName;
     private TextView noteName;
 
@@ -53,6 +53,7 @@ public class NewNoteActivity extends AppCompatActivity {
         dref= FirebaseDatabase.getInstance().getReference();
         progressDialog=new ProgressDialog(this);
         view=findViewById(R.id.view);
+        back=findViewById(R.id.backtonotes);
     }
 
     private void bindListeners(){
@@ -70,7 +71,7 @@ public class NewNoteActivity extends AppCompatActivity {
                 setNoteName.setVisibility(View.INVISIBLE);
             }
         });
-        cancel.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NewNoteActivity.this,NotesActivity.class));
@@ -137,6 +138,18 @@ public class NewNoteActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NewNoteActivity.this,SuccessfulNote.class));
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                noteName.setText("");
+                noteName.setVisibility(View.INVISIBLE);
+                setNoteName.setText("");
+                setNoteName.setVisibility(View.VISIBLE);
+                setNoteButton.setVisibility(View.VISIBLE);
+                note.setText("");
             }
         });
 
