@@ -21,7 +21,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     private static final int RESULT_LOAD_IMAGE = 1;
     private Button logout, backToNotes;
-    private ImageButton setProfileImage;
     private FirebaseAuth firebaseAuth;
     private ImageView profileImage;
     private TextView userView;
@@ -37,7 +36,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     void bindWidgets(){
         logout=findViewById(R.id.log_out);
-        setProfileImage=findViewById(R.id.set_profile_image);
         firebaseAuth=FirebaseAuth.getInstance();
         userView=findViewById(R.id.user_view);
         backToNotes=findViewById(R.id.notes_back_button);
@@ -45,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     void bindListeners(){
-        setProfileImage.setOnClickListener(new View.OnClickListener() {
+        profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -73,7 +71,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && data != null){
             Uri selectedImage = data.getData();
-            setProfileImage.setImageURI(selectedImage);
+            profileImage.setImageURI(selectedImage);
         }
     }
 }
