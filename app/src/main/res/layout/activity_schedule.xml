@@ -31,8 +31,23 @@
     <Button
         android:id="@+id/set_schedule"
         android:text="Set Task"
+        android:padding="12dp"
+        android:textColor="#ffffff"
+        android:background="#660033"
+        android:textSize="22sp"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/bnotes_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BACK TO LOGIN"
+        android:padding="12dp"
+        android:textColor="#ffffff"
+        android:background="#006666"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
