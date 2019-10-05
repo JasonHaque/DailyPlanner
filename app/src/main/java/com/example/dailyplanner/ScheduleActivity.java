@@ -3,6 +3,7 @@ package com.example.dailyplanner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import static com.example.dailyplanner.LogInActivity.userID;
 public class ScheduleActivity extends AppCompatActivity {
 
     private EditText taskName,taskTime;
-    private Button setTask;
+    private Button setTask,bNotes;
     private DatabaseReference dref;
     private ProgressDialog progressDialog;
     @Override
@@ -33,6 +34,7 @@ public class ScheduleActivity extends AppCompatActivity {
         taskName=findViewById(R.id.schedule_item);
         taskTime=findViewById(R.id.schedule_time);
         setTask=findViewById(R.id.set_schedule);
+        bNotes=findViewById(R.id.bnotes_button);
         dref= FirebaseDatabase.getInstance().getReference();
         progressDialog=new ProgressDialog(this);
     }
@@ -48,10 +50,14 @@ public class ScheduleActivity extends AppCompatActivity {
                     return;
                 }
                 setupTask(name,time);
-
             }
         });
-
+        bNotes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ScheduleActivity.this,NotesActivity.class));
+            }
+        });
     }
 
     private void setupTask(String name,String time){
