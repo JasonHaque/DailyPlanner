@@ -11,4 +11,20 @@ public class Task {
         this.nameTask = nameTask;
         this.timeTask = timeTask;
     }
+
+    public String getNameTask() {
+        return nameTask;
+    }
+
+    public void setNameTask(String nameTask) {
+        this.nameTask = nameTask;
+    }
+
+    public String getTimeTask() {
+        return timeTask;
+    }
+
+    public void setTimeTask(String timeTask) {
+        this.timeTask = timeTask;
+    }
 }

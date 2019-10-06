@@ -20,7 +20,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteHolder> {
     public NoteAdapter(Context context, ArrayList<NewNote> planets) {
             this.context = context;
             this.notes = planets;
-        }
+    }
 
     @NonNull
     @Override

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/recycler_task_name"
+        android:text="Note Name"
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/recycler_task_content"
+        android:layout_width="wrap_content"
+        android:textSize="16sp"
+        android:padding="20dp"
+        android:text="Note Content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

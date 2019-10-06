@@ -29,7 +29,6 @@ public class NoteHistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_history);
         bindWidgets();
-        createlistData();
 
     }
     private void createlistData(){
@@ -70,6 +69,7 @@ public class NoteHistoryActivity extends AppCompatActivity {
         adapter = new NoteAdapter(this, noteArrayList);
         recyclerView.setAdapter(adapter);
         dref= FirebaseDatabase.getInstance().getReference();
+        createlistData();
 
     }
 }
