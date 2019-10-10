@@ -7,7 +7,6 @@
     android:layout_height="match_parent">
     <TextView
         android:id="@+id/recycler_task_name"
-        android:text="Note Name"
         android:layout_width="wrap_content"
         android:textSize="40sp"
         android:textColor="#000000"
@@ -20,7 +19,6 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:padding="20dp"
-        android:text="Note Content"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>
