@@ -158,24 +158,5 @@ public class NewNoteActivity extends AppCompatActivity {
         });
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int a=item.getItemId();
-        if(a == R.id.log_out_menu){
-            firebaseAuth.signOut();
-            startActivity(new Intent(NewNoteActivity.this,LogInActivity.class));
-            finish();
-            return true;
 
-        }
-        else if(a == R.id.profile_id){
-
-        }
-        return false;
-    }
 }
