@@ -86,6 +86,7 @@ public class SignUpActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
                 Toast.makeText(SignUpActivity.this, "Failed", Toast.LENGTH_LONG).show();
             }
         });

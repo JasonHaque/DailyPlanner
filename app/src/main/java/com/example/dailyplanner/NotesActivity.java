@@ -1,12 +1,17 @@
 package com.example.dailyplanner;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NotesActivity extends AppCompatActivity {
 
@@ -94,5 +99,26 @@ public class NotesActivity extends AppCompatActivity {
                 startActivity(new Intent(NotesActivity.this,SeeScheduleActivity.class));
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int a=item.getItemId();
+        if(a == R.id.log_out_menu){
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(NotesActivity.this,LogInActivity.class));
+            finish();
+            return true;
+
+        }
+        else if(a == R.id.profile_id){
+            startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
+
+        }
+        return false;
     }
 }
