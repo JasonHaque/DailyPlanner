@@ -152,6 +152,14 @@ public class NewNoteActivity extends AppCompatActivity {
                 note.setText("");
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(NewNoteActivity.this, NotesActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
 
     }
 }

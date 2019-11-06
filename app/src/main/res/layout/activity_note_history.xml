@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".NoteHistoryActivity">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNotes"
         android:layout_width="match_parent"
