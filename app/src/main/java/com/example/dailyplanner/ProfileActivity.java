@@ -35,7 +35,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     void bindWidgets(){
-        logout=findViewById(R.id.log_out);
+        //logout=findViewById(R.id.log_out);
         firebaseAuth=FirebaseAuth.getInstance();
         userView=findViewById(R.id.user_view);
         backToNotes=findViewById(R.id.notes_back_button);
@@ -51,13 +51,13 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        logout.setOnClickListener(new View.OnClickListener() {
+        /*logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firebaseAuth.signOut();
                 startActivity(new Intent(ProfileActivity.this,LogInActivity.class));
             }
-        });
+        });*/
         backToNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
