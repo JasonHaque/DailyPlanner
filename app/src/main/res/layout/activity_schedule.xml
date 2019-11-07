@@ -28,8 +28,8 @@
         android:textColor="#0066ff"
         android:textStyle="bold"
         android:textSize="28sp"
-        android:backgroundTint="#0066ff"
         android:textCursorDrawable="@null"
+        android:backgroundTint="#0066ff"
         android:layout_marginBottom="16dp"
         android:layout_height="wrap_content"/>
     <EditText
@@ -40,8 +40,8 @@
         android:textColor="#0066ff"
         android:textStyle="bold"
         android:textSize="28sp"
-        android:backgroundTint="#0066ff"
         android:textCursorDrawable="@null"
+        android:backgroundTint="#0066ff"
         android:layout_width="match_parent"
         android:layout_marginBottom="30dp"
         android:layout_height="wrap_content"/>
