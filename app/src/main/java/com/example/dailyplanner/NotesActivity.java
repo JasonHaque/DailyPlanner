@@ -27,24 +27,24 @@ public class NotesActivity extends AppCompatActivity {
     }
     private void bindWidgets()
     {
-        linkToProfile1=findViewById(R.id.link_to_profile1);
+        //linkToProfile1=findViewById(R.id.link_to_profile1);
         newNote1=findViewById(R.id.new_note1);
         noteHistory1=findViewById(R.id.note_history1);
         schedule1=findViewById(R.id.schedule1);
         seeSchedule1=findViewById(R.id.see_schedule1);
-        linkToProfile2=findViewById(R.id.link_to_profile2);
+        //linkToProfile2=findViewById(R.id.link_to_profile2);
         newNote2=findViewById(R.id.new_note2);
         noteHistory2=findViewById(R.id.note_history2);
         schedule2=findViewById(R.id.schedule2);
         seeSchedule2=findViewById(R.id.see_schedule2);
     }
     private void bindListeners(){
-        linkToProfile1.setOnClickListener(new View.OnClickListener() {
+        /*linkToProfile1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
             }
-        });
+        });*/
         newNote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,12 +69,12 @@ public class NotesActivity extends AppCompatActivity {
                 startActivity(new Intent(NotesActivity.this,SeeScheduleActivity.class));
             }
         });
-        linkToProfile2.setOnClickListener(new View.OnClickListener() {
+        /*linkToProfile2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
             }
-        });
+        });*/
         newNote2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

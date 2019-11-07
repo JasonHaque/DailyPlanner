@@ -59,12 +59,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
         <Button
             android:id="@+id/save_note_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
+            android:layout_weight="1"
             android:padding="10dp"
             android:textColor="#ffffff"
             android:background="#004d00"
@@ -75,6 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
+            android:layout_weight="1"
             android:background="#990000"
             android:layout_marginRight="8dp"
             android:textColor="#ffffff"
@@ -86,6 +90,7 @@
             android:layout_height="wrap_content"
             android:textSize="22sp"
             android:background="#663300"
+            android:layout_weight="1"
             android:layout_marginRight="8dp"
             android:textColor="#ffffff"
             android:padding="10dp"
@@ -95,6 +100,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textSize="22sp"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:background="#006666"
             android:textColor="#ffffff"
