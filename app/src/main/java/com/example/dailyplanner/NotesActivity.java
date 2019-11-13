@@ -25,26 +25,18 @@ public class NotesActivity extends AppCompatActivity {
         bindWidgets();
         bindListeners();
     }
-    private void bindWidgets()
-    {
-        //linkToProfile1=findViewById(R.id.link_to_profile1);
+    private void bindWidgets(){
         newNote1=findViewById(R.id.new_note1);
         noteHistory1=findViewById(R.id.note_history1);
         schedule1=findViewById(R.id.schedule1);
         seeSchedule1=findViewById(R.id.see_schedule1);
-        //linkToProfile2=findViewById(R.id.link_to_profile2);
         newNote2=findViewById(R.id.new_note2);
         noteHistory2=findViewById(R.id.note_history2);
         schedule2=findViewById(R.id.schedule2);
         seeSchedule2=findViewById(R.id.see_schedule2);
     }
     private void bindListeners(){
-        /*linkToProfile1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
-            }
-        });*/
+
         newNote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
