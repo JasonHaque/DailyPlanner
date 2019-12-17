@@ -4,12 +4,17 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -21,7 +26,6 @@ public class NotesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
-
         bindWidgets();
         bindListeners();
     }
@@ -94,23 +98,30 @@ public class NotesActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+        MenuInflater inf = getMenuInflater();
+        inf.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int a=item.getItemId();
-        if(a == R.id.log_out_menu){
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(NotesActivity.this,LogInActivity.class));
-            finish();
+        switch (item.getItemId())
+        {
+            case R.id.log_out_menu:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(NotesActivity.this,LogInActivity.class));
+                finish();
+                break;
+            case R.id.profile_id:
+                startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
+                break;
+
+        }
+        /*if(a == ){
             return true;
-
         }
-        else if(a == R.id.profile_id){
-            startActivity(new Intent(NotesActivity.this,ProfileActivity.class));
+        else if(a == ){
 
-        }
+        }*/
         return false;
     }
     @Override

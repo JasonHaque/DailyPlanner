@@ -46,7 +46,7 @@
             android:textColor="#b34700"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp" />
         <Button
             android:id="@+id/login_button"
             android:layout_width="112dp"
