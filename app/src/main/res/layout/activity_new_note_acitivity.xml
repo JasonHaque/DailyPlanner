@@ -6,113 +6,122 @@
     android:layout_height="match_parent"
     android:background="#ebf0fa"
     android:orientation="vertical"
-    android:padding="15dp"
     tools:context=".NewNoteActivity">
+    <include
+        layout="@layout/newntoolbar"
+        android:id="@+id/too_bar">
 
-    <TextView
-        android:id="@+id/note_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="28sp"
-        android:fontFamily="@font/boogalooregular"
-        android:layout_marginTop="5dp"
-        android:textColor="#000000"
-        android:visibility="invisible"/>
+    </include>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp">
-        <EditText
-            android:id="@+id/set_note_name"
-            android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/note_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Note Name"
+            android:textSize="28sp"
+            android:fontFamily="@font/boogalooregular"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"
+            android:visibility="invisible"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+            <EditText
+                android:id="@+id/set_note_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Note Name"
+                android:fontFamily="@font/boogalooregular"
+                android:textSize="24sp"
+                android:backgroundTint="#000000"
+                android:textCursorDrawable="@null"
+                android:layout_weight="2"/>
+            <Button
+                android:id="@+id/set_note_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#333399"
+                android:textColor="#ffffff"
+                android:padding="12dp"
+                android:fontFamily="@font/boogalooregular"
+                android:textSize="22sp"
+                android:text="Set Name"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="40"
+            android:minLines="13"
             android:fontFamily="@font/boogalooregular"
             android:textSize="24sp"
-            android:backgroundTint="#000000"
             android:textCursorDrawable="@null"
-            android:layout_weight="2"/>
-        <Button
-            android:id="@+id/set_note_button"
-            android:layout_width="wrap_content"
+            android:background="@drawable/back"
+            android:scrollbars="vertical"
+            android:gravity="left|top"
+            android:hint="Enter Your Note">
+            <requestFocus />
+        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#333399"
-            android:textColor="#ffffff"
-            android:padding="12dp"
-            android:fontFamily="@font/boogalooregular"
-            android:textSize="22sp"
-            android:text="Set Name"/>
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/note"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:maxLines="40"
-        android:minLines="13"
-        android:fontFamily="@font/boogalooregular"
-        android:textSize="24sp"
-        android:textCursorDrawable="@null"
-        android:background="@drawable/back"
-        android:scrollbars="vertical"
-        android:gravity="left|top"
-        android:hint="Enter Your Note">
-        <requestFocus />
-    </EditText>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        android:weightSum="4">
-        <Button
-            android:id="@+id/save_note_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:fontFamily="@font/boogalooregular"
-            android:textColor="#ffffff"
-            android:background="#004d00"
-            android:layout_marginRight="8dp"
-            android:text="Save"/>
-        <Button
-            android:id="@+id/cancel_note"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:layout_weight="1"
-            android:fontFamily="@font/boogalooregular"
-            android:background="#990000"
-            android:layout_marginRight="8dp"
-            android:textColor="#ffffff"
-            android:padding="10dp"
-            android:text="Cancel"/>
-        <Button
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:fontFamily="@font/boogalooregular"
-            android:background="#663300"
-            android:layout_weight="1"
-            android:layout_marginRight="8dp"
-            android:textColor="#ffffff"
-            android:padding="10dp"
-            android:text="View"/>
-        <Button
-            android:id="@+id/backtonotes"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:fontFamily="@font/boogalooregular"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:background="#006666"
-            android:textColor="#ffffff"
-            android:padding="10dp"
-            android:text="Back"/>
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="4">
+            <Button
+                android:id="@+id/save_note_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:fontFamily="@font/boogalooregular"
+                android:textColor="#ffffff"
+                android:background="#004d00"
+                android:layout_marginRight="8dp"
+                android:text="Save"/>
+            <Button
+                android:id="@+id/cancel_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/boogalooregular"
+                android:background="#990000"
+                android:layout_marginRight="8dp"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:text="Cancel"/>
+            <Button
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="@font/boogalooregular"
+                android:background="#663300"
+                android:layout_weight="1"
+                android:layout_marginRight="8dp"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:text="View"/>
+            <Button
+                android:id="@+id/backtonotes"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:fontFamily="@font/boogalooregular"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="#006666"
+                android:textColor="#ffffff"
+                android:padding="10dp"
+                android:text="Back"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

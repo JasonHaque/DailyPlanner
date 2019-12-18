@@ -6,70 +6,81 @@
     android:layout_height="match_parent"
     android:background="@drawable/schedule3"
     android:orientation="vertical"
-    android:padding="15dp"
     tools:context=".ScheduleActivity">
+    <include
+        layout="@layout/too_bar"
+        android:id="@+id/toobaar">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#ff3300"
-        android:textStyle="bold"
-        android:textSize="50sp"
-        android:fontFamily="@font/boogalooregular"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="12dp"
-        android:text="Schedule"/>
+    </include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/schedule_item"
-        android:hint="Enter your Schedule"
-        android:layout_width="match_parent"
-        android:textColorHint="#0066ff"
-        android:fontFamily="@font/boogalooregular"
-        android:inputType="text"
-        android:textColor="#0066ff"
-        android:textStyle="bold"
-        android:textSize="28sp"
-        android:textCursorDrawable="@null"
-        android:backgroundTint="#0066ff"
-        android:layout_marginBottom="16dp"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/schedule_time"
-        android:hint="Time"
-        android:inputType="datetime"
-        android:textColorHint="#0066ff"
-        android:textColor="#0066ff"
-        android:textStyle="bold"
-        android:textSize="28sp"
-        android:fontFamily="@font/boogalooregular"
-        android:textCursorDrawable="@null"
-        android:backgroundTint="#0066ff"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="30dp"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/set_schedule"
-        android:text="Set Task"
-        android:padding="12dp"
-        android:textColor="#ffffff"
-        android:background="#660033"
-        android:textSize="22sp"
-        android:fontFamily="@font/boogalooregular"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/bnotes_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BACK"
-        android:fontFamily="@font/boogalooregular"
-        android:padding="12dp"
-        android:textColor="#ffffff"
-        android:background="#006666"
-        android:textSize="22sp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff3300"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:fontFamily="@font/boogalooregular"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:text="Schedule"/>
+
+        <EditText
+            android:id="@+id/schedule_item"
+            android:hint="Enter your Schedule"
+            android:layout_width="match_parent"
+            android:textColorHint="#0066ff"
+            android:fontFamily="@font/boogalooregular"
+            android:inputType="text"
+            android:textColor="#0066ff"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="#0066ff"
+            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/schedule_time"
+            android:hint="Time"
+            android:inputType="datetime"
+            android:textColorHint="#0066ff"
+            android:textColor="#0066ff"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:fontFamily="@font/boogalooregular"
+            android:textCursorDrawable="@null"
+            android:backgroundTint="#0066ff"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="30dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/set_schedule"
+            android:text="Set Task"
+            android:padding="12dp"
+            android:textColor="#ffffff"
+            android:background="#660033"
+            android:textSize="22sp"
+            android:fontFamily="@font/boogalooregular"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/bnotes_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BACK"
+            android:fontFamily="@font/boogalooregular"
+            android:padding="12dp"
+            android:textColor="#ffffff"
+            android:background="#006666"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

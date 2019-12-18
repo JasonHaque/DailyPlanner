@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:popupTheme="@style/CustomToolbarStyle"
     app:titleTextColor="#FFFFFF"
-    android:background="@color/colorPrimaryDark">
+    android:background="#cc2900">
 
 </androidx.appcompat.widget.Toolbar>

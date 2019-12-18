@@ -2,6 +2,7 @@ package com.example.dailyplanner;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -44,6 +45,9 @@ public class NewNoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_note_acitivity);
+        Toolbar toolbar = findViewById(R.id.too_bar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextAppearance(this, R.style.CustomToolbarStyle);
         bindWidgets();
         bindListeners();
     }
