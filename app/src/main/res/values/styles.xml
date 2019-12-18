@@ -9,4 +9,10 @@
         <item name="fontFamily">@font/boogalooregular</item>
         <!--item name="popupMenuStyle">@style/MenuActivity6Theme</item-->
     </style>
+    <style name="CustomToolbarStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/skyBlue</item>
+        <item name="android:fontFamily">@font/boogalooregular</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">21sp</item>
+    </style>
 </resources>

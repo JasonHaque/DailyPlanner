@@ -12,6 +12,7 @@
         android:textSize="40sp"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="100dp"
+        android:fontFamily="@font/boogalooregular"
         android:padding="10dp"
         android:layout_marginBottom="15dp"
         android:layout_height="wrap_content"/>
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:textSize="30sp"
         android:layout_marginLeft="100dp"
+        android:fontFamily="@font/boogalooregular"
         android:textColor="#00004d"
         android:padding="20dp"
         android:layout_height="wrap_content"/>

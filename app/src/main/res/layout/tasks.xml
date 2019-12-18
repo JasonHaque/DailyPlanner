@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:textSize="40sp"
         android:textColor="#000000"
+        android:fontFamily="@font/boogalooregular"
         android:padding="10dp"
         android:layout_marginBottom="16dp"
         android:layout_height="wrap_content"/>
@@ -19,6 +20,7 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:padding="20dp"
+        android:fontFamily="@font/boogalooregular"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

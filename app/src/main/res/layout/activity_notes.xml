@@ -5,159 +5,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="@drawable/notesback2"
     tools:context=".NotesActivity">
+        <include
+            layout="@layout/app_bar"
+            android:id="@+id/appbar">
+
+        </include>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp"
-            android:weightSum="2">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="10dp"
-                android:background="#248f24"
-                android:layout_weight="1">
-                <ImageButton
-                    android:id="@+id/new_note1"
-                    android:layout_width="match_parent"
-                    android:layout_height="233dp"
-                    android:src="@drawable/newnote"
-                    android:scaleType="fitCenter"
-                    android:background="#248f24"
-                    android:adjustViewBounds="true"
-                    android:layout_marginBottom="5dp"/>
-                <Button
-                    android:id="@+id/new_note2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="New Note"
-                    android:background="#248f24"
-                    android:textAlignment="center"
-                    android:textColor="#ffffff"
-                    android:textSize="25sp" />
-            </LinearLayout>
-
-            <!--android:background="#248f24"-->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#ffcc99"
-                android:layout_weight="1">
-                <ImageButton
-                    android:id="@+id/note_history1"
-                    android:layout_width="match_parent"
-                    android:src="@drawable/existingnote"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:background="#ffcc99"
-                    android:layout_height="233dp" />
-                <Button
-                    android:id="@+id/note_history2"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Existing Notes"
-                    android:background="#ffcc99"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="25sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="10dp"
-                android:background="#996600"
-                android:layout_weight="1">
-                <ImageButton
-                    android:id="@+id/schedule1"
-                    android:layout_width="match_parent"
-                    android:layout_height="233dp"
-                    android:src="@drawable/dailyschedule"
-                    android:scaleType="fitCenter"
-                    android:background="#996600"
-                    android:adjustViewBounds="true"
-                    android:layout_marginBottom="5dp"/>
-                <Button
-                    android:id="@+id/schedule2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Daily Schedule"
-                    android:background="#996600"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="25sp" />
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#6699ff"
-                android:layout_weight="1">
-                <ImageButton
-                    android:id="@+id/see_schedule1"
-                    android:layout_width="match_parent"
-                    android:src="@drawable/seeschedule"
-                    android:scaleType="fitCenter"
-                    android:adjustViewBounds="true"
-                    android:background="#6699ff"
-                    android:layout_height="233dp" />
-                <Button
-                    android:id="@+id/see_schedule2"
-                    android:layout_marginTop="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="See Schedule"
-                    android:background="#6699ff"
-                    android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="25sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_margin="10dp"
-            android:padding="11dp"
-            android:background="#999966"
-            android:layout_weight="1">
-            <ImageButton
-                android:id="@+id/link_to_profile1"
-                android:layout_width="230dp"
-                android:src="@drawable/gotoprofile"
-                android:scaleType="fitCenter"
-                android:adjustViewBounds="true"
-                android:background="#999966"
-                android:layout_height="match_parent" />
-            <Button
-                android:id="@+id/link_to_profile2"
-                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Go to Profile"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="#248f24"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/new_note1"
+                        android:layout_width="match_parent"
+                        android:layout_height="233dp"
+                        android:src="@drawable/newnote"
+                        android:scaleType="fitCenter"
+                        android:background="#248f24"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="5dp"/>
+                    <Button
+                        android:id="@+id/new_note2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="New Note"
+                        android:fontFamily="@font/boogalooregular"
+                        android:background="#248f24"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <!--android:background="#248f24"-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#ffcc99"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/note_history1"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/existingnote"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:background="#ffcc99"
+                        android:layout_height="233dp" />
+                    <Button
+                        android:id="@+id/note_history2"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Existing Notes"
+                        android:fontFamily="@font/boogalooregular"
+                        android:background="#ffcc99"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="#996600"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/schedule1"
+                        android:layout_width="match_parent"
+                        android:layout_height="233dp"
+                        android:src="@drawable/dailyschedule"
+                        android:scaleType="fitCenter"
+                        android:background="#996600"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="5dp"/>
+                    <Button
+                        android:id="@+id/schedule2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Daily Schedule"
+                        android:fontFamily="@font/boogalooregular"
+                        android:background="#996600"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#6699ff"
+                    android:layout_weight="1">
+                    <ImageButton
+                        android:id="@+id/see_schedule1"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/seeschedule"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:background="#6699ff"
+                        android:layout_height="233dp" />
+                    <Button
+                        android:id="@+id/see_schedule2"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="See Schedule"
+                        android:fontFamily="@font/boogalooregular"
+                        android:background="#6699ff"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:padding="11dp"
                 android:background="#999966"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="25sp" />
-        </LinearLayout-->
+                android:layout_weight="1">
+                <ImageButton
+                    android:id="@+id/link_to_profile1"
+                    android:layout_width="230dp"
+                    android:src="@drawable/gotoprofile"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#999966"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:id="@+id/link_to_profile2"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Go to Profile"
+                    android:background="#999966"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+            </LinearLayout-->
+        </LinearLayout>
     </LinearLayout>
