@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fontFamily="@font/boogalooregular"
     android:background="@drawable/writingatodolist"
     tools:context=".LogInActivity">
     <LinearLayout
@@ -35,7 +34,6 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/email_address"
                 android:textColor="#b34700"
-                android:fontFamily="@font/boogalooregular"
                 android:textStyle="bold"
                 android:textSize="25sp"
                 android:backgroundTint="#b34700"
@@ -57,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#b34700"
                 android:textStyle="bold"
-                android:textSize="22sp"
+                android:textSize="23sp"
                 android:fontFamily="@font/boogalooregular"
                 android:textCursorDrawable="@null"
                 android:textColor="#b34700"
