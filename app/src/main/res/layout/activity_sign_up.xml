@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/writingatodolist"
     tools:context=".SignUpActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
         android:layout_marginTop="70dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,48 +25,79 @@
             android:layout_marginBottom="30dp"
             android:textSize="70sp"/>
 
-        <EditText
-            android:id="@+id/signup_mail"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email_address"
-            android:textColorHint="#b34700"
-            android:textColor="#b34700"
-            android:fontFamily="@font/boogalooregular"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:backgroundTint="#b34700"
-            android:textCursorDrawable="@null"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="16dp"/>
-        <EditText
-            android:id="@+id/signup_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            tools:ignore="MissingConstraints"
+            android:theme="@style/TextLabel">
+
+            <EditText
+                android:id="@+id/signup_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_address"
+                android:textColor="#b34700"
+                android:fontFamily="@font/boogalooregular"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:backgroundTint="#b34700"
+                android:textCursorDrawable="@null"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="16dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
-            android:textColorHint="#b34700"
-            android:textColor="#b34700"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/boogalooregular"
-            android:backgroundTint="#b34700"
-            android:textCursorDrawable="@null"
-            android:inputType="textPassword"
-            android:layout_marginBottom="16dp"/>
-        <EditText
-            android:id="@+id/confirm_signup_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:passwordToggleTint="#ffffff"
+            tools:ignore="MissingConstraints"
+            android:theme="@style/TextLabel"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColor="#b34700"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/boogalooregular"
+                android:backgroundTint="#b34700"
+                android:textCursorDrawable="@null"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/confirm_password"
-            android:textColorHint="#b34700"
-            android:textColor="#b34700"
-            android:textSize="25sp"
-            android:fontFamily="@font/boogalooregular"
-            android:textStyle="bold"
-            android:backgroundTint="#b34700"
-            android:textCursorDrawable="@null"
-            android:inputType="textPassword"
-            android:layout_marginBottom="16dp"/>
+            tools:ignore="MissingConstraints"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            app:passwordToggleTint="#ffffff"
+            android:theme="@style/TextLabel"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/confirm_signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                android:textColor="#b34700"
+                android:textSize="22sp"
+                android:fontFamily="@font/boogalooregular"
+                android:textStyle="bold"
+                android:backgroundTint="#b34700"
+                android:textCursorDrawable="@null"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/signup_button"
             android:layout_width="match_parent"
@@ -77,6 +110,7 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"
             android:text="@string/sign_up"/>
+
         <Button
             android:id="@+id/backlogin_button"
             android:layout_width="match_parent"
@@ -89,5 +123,7 @@
             android:textSize="22sp"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"/>
+
     </LinearLayout>
+
 </ScrollView>
